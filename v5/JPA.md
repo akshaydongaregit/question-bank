@@ -25,8 +25,37 @@
 ⚡ Challenging Level
 
     How do you optimize performance with JPA in high-traffic applications?
+    🚀 Summary: JPA Performance Optimization Checklist
+    Optimization	Key Benefit
+    ✅ LAZY Fetching & JOIN FETCH	Prevents unnecessary data loading
+    ✅ @EntityGraph	Solves N+1 query issue
+    ✅ Pagination (Pageable)	Avoids loading huge datasets in memory
+    ✅ Caching (@Cacheable, Second-Level Cache)	Reduces DB load for frequently accessed data
+    ✅ Batch Inserts (hibernate.jdbc.batch_size)	Improves insert/update performance
+    ✅ Read-Only Transactions	Avoids unnecessary dirty-checking
+    ✅ Indexing & DTO Projections	Speeds up queries
+    ✅ Connection Pooling (HikariCP)	Improves DB connection efficiency
+    ✅ Statement Caching	Reduces query parsing overhead
+    ✅ Read-Replica Database	Handles high read traffic
+
     Explain the difference between @ElementCollection and @OneToMany.
+
     How do you handle entity versioning and optimistic locking in JPA?
+        2️⃣ How Does JPA Handle @Version?
+
+        When JPA detects a versioned entity update:
+
+            It adds WHERE version = ? to the update statement.
+            If no rows are updated, it throws OptimisticLockException.
+
+        ✅ Generated SQL for Update
+
+        UPDATE product 
+        SET price = ?, version = version + 1 
+        WHERE id = ? AND version = ?;
+
+        If no row matches the WHERE condition, it means another transaction has updated the entity, causing an optimistic lock failure.
+
     What are the potential pitfalls of the N+1 select problem, and how do you resolve it?
     How do you manage caching in Spring Data JPA?
 

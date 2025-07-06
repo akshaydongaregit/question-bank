@@ -18,6 +18,10 @@
     How do you handle configuration management in microservices?
     What is a sidecar pattern, and when would you use it in microservices?
     How do you implement rate limiting and throttling in microservices?
+        2.1 Token Bucket Algorithm (Most Common)
+        2.2 Leaky Bucket Algorithm
+        2.3 Fixed Window & Sliding Window Counters
+
     What is service orchestration vs. service choreography?
     How would you manage data consistency in microservices with independent databases?
     Explain how you can use Docker and Kubernetes with microservices.
@@ -47,6 +51,17 @@
     What are anti-patterns in microservices architecture, and how do you avoid them?
     How do you implement a multi-tenancy architecture using microservices?
     What are some design patterns useful for microservices, and in which scenarios would you apply them?
+        1️⃣ API Gateway Pattern
+        2️⃣ Backend for Frontend (BFF) Pattern
+        3️⃣ Circuit Breaker Pattern
+        4️⃣ Saga Pattern (For Distributed Transactions)
+        5️⃣ Event Sourcing Pattern
+        6️⃣ CQRS (Command Query Responsibility Segregation) Pattern
+        7️⃣ Strangler Fig Pattern (For Legacy Modernization)
+        8️⃣ Sidecar Pattern (For Service Enhancements)
+        9️⃣ Bulkhead Pattern (Isolating Services)
+        
+
     How would you approach debugging in a highly distributed microservices environment?
     How do you measure and improve the performance of microservices?
 
